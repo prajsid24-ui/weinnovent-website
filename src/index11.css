@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+/* ── Design tokens ──────────────────────────── */
+:root {
+  --bg:              #0a0a0a;
+  --bg-2:            #111111;
+  --bg-3:            #181818;
+  --bg-light:        #f7f6f3;
+  --bg-card:         #141414;
+
+  --text:            #f0ede8;
+  --text-2:          rgba(240,237,232,0.6);
+  --text-3:          rgba(240,237,232,0.32);
+  --text-dark:       #0a0a0a;
+  --text-dark-2:     rgba(10,10,10,0.56);
+
+  --brand:           #0C6867;
+  --brand-light:     #0f8584;
+  --brand-glow:      rgba(12,104,103,0.18);
+  --gold:            #c9a96e;
+  --gold-2:          rgba(201,169,110,0.15);
+
+  --border:          rgba(240,237,232,0.08);
+  --border-2:        rgba(240,237,232,0.14);
+  --border-light:    rgba(0,0,0,0.08);
+
+  --font-display:    'Syne', sans-serif;
+  --font:            'DM Sans', sans-serif;
+
+  --ease:            cubic-bezier(0.22, 1, 0.36, 1);
+  --radius:          16px;
+  --radius-sm:       10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 { margin: 0; font-family: var(--font-display); }
+p { margin: 0; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+
+#root { width: 100%; min-height: 100vh; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 2px; }
+
+/* ── Selection ── */
+::selection { background: var(--brand); color: #fff; }

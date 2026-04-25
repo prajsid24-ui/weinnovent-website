@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="bg-[#FAFAF9] text-[#111111] min-h-screen overflow-x-hidden">
+    <div style={{ fontFamily: "var(--font)" }}>
       <Navbar />
       <Hero />
       <Services />
