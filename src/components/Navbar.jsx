@@ -48,7 +48,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Weinnovent Studios"
-            style={{ height: 40, width: 'auto', objectFit: 'contain' }}
+            style={{ height: 300, width: 'auto', objectFit: 'contain' }}
           />
         </a>
 
