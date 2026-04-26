@@ -281,7 +281,7 @@ export default function Hero() {
         backgroundImage: 'url(/hero-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center top',
-        filter: 'brightness(0.75)',
+        filter: 'brightness(0.3)',
       }} />
 
       {/* Gradient overlay */}
