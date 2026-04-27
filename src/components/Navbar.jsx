@@ -30,11 +30,11 @@ export default function Navbar() {
         position: 'fixed',
         top: 0, left: 0, right: 0,
         zIndex: 100,
-        background: scrolled ? 'rgba(255,255,255,0.72)' : 'transparent',
-        backdropFilter: scrolled ? 'saturate(180%) blur(20px)' : 'none',
-        WebkitBackdropFilter: scrolled ? 'saturate(180%) blur(20px)' : 'none',
-        borderBottom: scrolled ? '0.5px solid rgba(0,0,0,0.12)' : '0.5px solid transparent',
-        boxShadow: scrolled ? '0 1px 0 rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.5)' : 'none',
+        background: 'rgba(255,255,255,0.72)',
+        backdropFilter: 'saturate(180%) blur(20px)',
+        WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+        borderBottom: '0.5px solid rgba(0,0,0,0.12)',
+        boxShadow: '0 1px 0 rgba(0,0,0,0.03), inset 0 1px 0 rgba(255,255,255,0.5)',
         transition: [
           'background 0.4s ease',
           'backdrop-filter 0.4s ease',
@@ -82,7 +82,7 @@ export default function Navbar() {
               style={{
                 fontSize: 14,
                 fontWeight: 500,
-                color: scrolled ? '#1d1d1f' : '#ffffff',
+                color: '#1d1d1f',
                 padding: '7px 15px',
                 borderRadius: 8,
                 letterSpacing: '-0.01em',
@@ -90,9 +90,7 @@ export default function Navbar() {
                 cursor: 'pointer',
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = scrolled
-                  ? 'rgba(0,0,0,0.06)'
-                  : 'rgba(255,255,255,0.15)'
+                e.currentTarget.style.background = 'rgba(0,0,0,0.06)'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = 'transparent'
@@ -138,17 +136,17 @@ export default function Navbar() {
             <motion.span
               animate={{ rotate: menuOpen ? 45 : 0, y: menuOpen ? 6.5 : 0 }}
               transition={{ duration: 0.3, ease }}
-              style={{ display: 'block', width: 22, height: 1.5, background: scrolled ? '#1d1d1f' : '#ffffff', borderRadius: 2, transformOrigin: 'center' }}
+              style={{ display: 'block', width: 22, height: 1.5, background: '#1d1d1f', borderRadius: 2, transformOrigin: 'center' }}
             />
             <motion.span
               animate={{ opacity: menuOpen ? 0 : 1, scaleX: menuOpen ? 0 : 1 }}
               transition={{ duration: 0.2 }}
-              style={{ display: 'block', width: 15, height: 1.5, background: scrolled ? '#1d1d1f' : '#ffffff', borderRadius: 2 }}
+              style={{ display: 'block', width: 15, height: 1.5, background: '#1d1d1f', borderRadius: 2 }}
             />
             <motion.span
               animate={{ rotate: menuOpen ? -45 : 0, y: menuOpen ? -6.5 : 0 }}
               transition={{ duration: 0.3, ease }}
-              style={{ display: 'block', width: 22, height: 1.5, background: scrolled ? '#1d1d1f' : '#ffffff', borderRadius: 2, transformOrigin: 'center' }}
+              style={{ display: 'block', width: 22, height: 1.5, background: '#1d1d1f', borderRadius: 2, transformOrigin: 'center' }}
             />
           </button>
         </div>

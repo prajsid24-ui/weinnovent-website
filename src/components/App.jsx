@@ -19,7 +19,6 @@ export default function App() {
       <Testimonials />
       <ContactCTA />
       <Footer />
-      {/* Always visible — floating WhatsApp + sticky bottom bar */}
       <WhatsAppFloat />
     </div>
   )
