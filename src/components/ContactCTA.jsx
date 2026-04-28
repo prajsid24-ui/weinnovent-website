@@ -57,23 +57,23 @@ export default function ContactCTA() {
             <div style={{ position: 'relative', zIndex: 1 }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 48, alignItems: 'start' }} className="contact-inner">
                 <div>
-                  <motion.p initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1, ease }}
-                    style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 16 }}>Free Strategy Call · No Commitment</motion.p>
+                  <motion.p initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.6, delay: 0.1, ease }}
+                    style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 16 }}>Limited Slots · Free Strategy Call · No Commitment</motion.p>
 
-                  <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.15, ease }}
+                  <motion.h2 initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.9, delay: 0.15, ease }}
                     style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#1a1a1a', marginBottom: 16 }}>
-                    Stop Wasting Budget.<br />Start <span style={{ color: '#0C6867' }}>Getting Results.</span>
+                    Your competitors are already<br />running ads. <span style={{ color: '#0C6867' }}>Are you?</span>
                   </motion.h2>
 
                   <motion.p initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.25, ease }}
                     style={{ fontSize: 16, lineHeight: 1.75, color: 'rgba(0,0,0,0.55)', maxWidth: 480, marginBottom: 32 }}>
-                    We've helped Bengaluru brands generate <strong>1,500+ leads</strong> and grow from <strong>₹10L to ₹1Cr</strong> in revenue. Book your free strategy call — we'll show you exactly what's holding your brand back and how to fix it.
+                    Every month you wait, another brand takes the client that should have been yours. We've helped Bengaluru businesses generate <strong>1,500+ leads</strong> and grow from <strong>₹10L to ₹1Cr</strong> in under 6 months. In your free call, we'll show you exactly what's holding your brand back — and the one move that will change it.
                   </motion.p>
 
                   {/* Social proof row */}
                   <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ duration: 0.6, delay: 0.3, ease }}
                     style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-                    {['✅ Free 30-min call', '⚡ Reply in 2 hours', '📍 North Bengaluru', '🎯 Real results guaranteed'].map(t => (
+                    {['✅ Free 30-min call', '⚡ Reply in 2 hours', '🔒 No sales pressure', '🎯 Actionable roadmap'].map(t => (
                       <span key={t} style={{ fontSize: 12, fontWeight: 500, color: 'rgba(0,0,0,0.55)', padding: '6px 12px', borderRadius: 999, background: 'rgba(255,255,255,0.6)', border: '1px solid rgba(0,0,0,0.08)', backdropFilter: 'blur(8px)' }}>{t}</span>
                     ))}
                   </motion.div>
@@ -106,7 +106,7 @@ export default function ContactCTA() {
                     { icon: '🎯', label: 'Leads Generated', value: '1,500+', color: '#0C6867' },
                     { icon: '📈', label: 'Revenue Grown', value: '₹10L → ₹1Cr', color: '#c9a96e' },
                     { icon: '⚡', label: 'ROI on Ad Spend', value: '3x Average', color: '#a78bfa' },
-                    { icon: '📍', label: 'Based In', value: 'North Bengaluru', color: '#0C6867' },
+                    { icon: '📍', label: 'Based In', value: 'Bengaluru', color: '#0C6867' },
                   ].map((item, i) => (
                     <motion.div key={item.label}
                       initial={{ opacity: 0, y: 16, scale: 0.95 }}

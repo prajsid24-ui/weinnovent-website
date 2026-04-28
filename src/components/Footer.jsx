@@ -38,7 +38,7 @@ export default function Footer() {
                 style={{ height: 200, width: 'auto', objectFit: 'contain', marginBottom: 16, display: 'block' }} />
 
               <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, maxWidth: 240, fontStyle: 'italic', marginBottom: 24 }}>
-                North Bengaluru's premium digital marketing studio. We build brands that generate real revenue.
+                Bengaluru's premium digital marketing studio. We build brands that generate real revenue.
               </p>
 
               {/* Contact details */}
@@ -65,7 +65,7 @@ export default function Footer() {
                 </a>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>
                   <span style={{ width: 28, height: 28, borderRadius: 8, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 12, flexShrink: 0 }}>📍</span>
-                  North Bengaluru, Karnataka
+                  Bengaluru, Karnataka
                 </div>
               </div>
 
@@ -103,7 +103,7 @@ export default function Footer() {
               <p style={{ fontSize: 10, fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 16 }}>Follow Us</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                 {[
-                  { l: 'Instagram', h: 'https://instagram.com/weinnovent' },
+                  { l: 'Instagram', h: 'https://www.instagram.com/weinnovent_studios/' },
                   { l: 'LinkedIn', h: 'https://linkedin.com/company/weinnovent' },
                   { l: 'Facebook', h: 'https://facebook.com/weinnovent' },
                   { l: 'YouTube', h: 'https://youtube.com/@weinnovent' },
@@ -148,17 +148,25 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* SEO keyword paragraph */}
+          <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: 24, marginBottom: 20 }}>
+            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.18)', lineHeight: 1.8, maxWidth: 900 }}>
+              Weinnovent Studios is a full-service digital marketing and creative agency based in Bengaluru, India. We offer social media marketing, Instagram marketing, performance marketing, Google Ads, Facebook Ads, brand identity design, logo design, architecture photography, interior photography, product photography, commercial videography, brand film production, content creation, and website design. We serve interior designers, architects, architecture firms, real estate developers, building material companies, construction firms, channel partners, startups, and small businesses across Bengaluru, Bangalore, Karnataka, Mumbai, Delhi, Hyderabad, Chennai, and Pune.
+            </p>
+          </div>
+
           {/* Bottom bar */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16, paddingTop: 28 }}>
             <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)' }}>
-              © 2026 Weinnovent Studios · Digital Marketing Agency · North Bengaluru, Karnataka, India
+              © 2026 Weinnovent Studios · Digital Marketing & Photography Agency · Bengaluru, Karnataka, India
             </p>
             <div style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
-              {['Privacy Policy', 'Terms of Service'].map(l => (
-                <a key={l} href="#" style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
-                  onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}
-                  onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.2)'}>{l}</a>
-              ))}
+              <a href="mailto:hello@weinnovent.com?subject=Privacy Policy Enquiry" style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.2)'}>Privacy Policy</a>
+              <a href="mailto:hello@weinnovent.com?subject=Terms of Service Enquiry" style={{ fontSize: 12, color: 'rgba(255,255,255,0.2)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.45)'}
+                onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.2)'}>Terms of Service</a>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
                 style={{ fontSize: 11, fontWeight: 600, color: '#25d366', padding: '4px 12px', borderRadius: 999, border: '1px solid rgba(37,211,102,0.3)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5 }}>
                 <WA_SVG /> WhatsApp

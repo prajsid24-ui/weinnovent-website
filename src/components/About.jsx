@@ -5,8 +5,8 @@ const ease = [0.22, 1, 0.36, 1]
 
 const pillars = [
   { num: '01', title: 'Strategy First', desc: 'Every engagement begins with research. We understand your market, audience, and competitors before a single creative decision is made.', color: '#0C6867', glow: 'rgba(12,104,103,0.3)', icon: '◎' },
-  { num: '02', title: 'Creative Discipline', desc: 'We obsess over quality. Every brand film, ad creative, and line of copy is crafted to capture attention and communicate something worth saying.', color: '#c9a96e', glow: 'rgba(201,169,110,0.3)', icon: '✦' },
-  { num: '03', title: 'Measurable Outcomes', desc: 'We track what moves your business — leads, revenue, ROAS, and retention. Results, not reports.', color: '#a78bfa', glow: 'rgba(167,139,250,0.3)', icon: '◈' },
+  { num: '02', title: 'Creative Discipline', desc: 'We obsess over quality. Every piece of content — every reel, caption, and visual — is crafted to capture attention and communicate something worth saying.', color: '#c9a96e', glow: 'rgba(201,169,110,0.3)', icon: '✦' },
+  { num: '03', title: 'Organic Over Vanity', desc: "We don't chase follower counts. We build real brand authority through consistent, high-quality content that attracts the right audience and grows your business naturally.", color: '#a78bfa', glow: 'rgba(167,139,250,0.3)', icon: '◈' },
 ]
 
 function GlassPillar({ item, index }) {
@@ -115,11 +115,11 @@ export default function About() {
         {/* Header */}
         <div ref={ref} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'end', marginBottom: 72 }} className="about-header">
           <div>
-            <motion.p initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease }}
+            <motion.p initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.6, ease }}
               style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 16 }}>
               Why Weinnovent Studios
             </motion.p>
-            <motion.h2 initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.9, delay: 0.1, ease }}
+            <motion.h2 initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.9, delay: 0.1, ease }}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.4rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#1a1a1a' }}>
               We don't deliver services.<br />We deliver <span style={{ color: '#0C6867' }}>outcomes.</span>
             </motion.h2>

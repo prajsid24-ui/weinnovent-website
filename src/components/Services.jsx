@@ -4,12 +4,12 @@ import { motion, useInView } from 'framer-motion'
 const ease = [0.22, 1, 0.36, 1]
 
 const services = [
-  { num: '01', title: 'Branding & Identity', desc: 'Logos, systems, and visual guidelines. The strategic foundation that makes your brand unmistakable in any room.', tag: 'Foundation', image: '/branding.png' },
-  { num: '02', title: 'Social Media Marketing', desc: 'Reels, carousels, and community strategy — built to grow your audience and convert attention into revenue.', tag: 'Growth', image: '/social.png' },
-  { num: '03', title: 'Performance Marketing', desc: 'Precision campaigns on Meta and Google, engineered for ROAS and optimised daily.', tag: 'Revenue', image: '/performance.png' },
-  { num: '04', title: 'Content Creation', desc: 'Copy, scripts, and narratives that communicate with authority and make audiences act.', tag: 'Voice', image: '/content.png' },
-  { num: '05', title: 'Photography & Videography', desc: 'Product shoots, brand films, and campaign assets that position you at a premium.', tag: 'Visual', image: '/photo.png' },
-  { num: '06', title: 'Website Design', desc: 'Fast, conversion-focused sites designed to represent your brand at its highest level.', tag: 'Digital', image: '/website.png' },
+  { num: '01', title: 'Branding & Identity', desc: 'Your brand is your first pitch. We build logos, systems, and visual identity that make you the obvious premium choice — before you say a word.', tag: 'Foundation', image: '/branding.png' },
+  { num: '02', title: 'Social Media Marketing', desc: "We don't chase followers — we build audiences that actually care. Organic reels, carousels, and content strategy that grows your brand the right way and turns real engagement into real clients.", tag: 'Growth', image: '/social.png' },
+  { num: '03', title: 'Performance Marketing', desc: 'For brands ready to scale with paid campaigns — every rupee tracked, every campaign optimised. Meta and Google ads built for one outcome: qualified leads that close.', tag: 'Revenue', image: '/performance.png' },
+  { num: '04', title: 'Content Creation', desc: 'Brands that speak with authority win clients without chasing them. We write, script, and produce content that makes your audience trust you before they meet you.', tag: 'Voice', image: '/content.png' },
+  { num: '05', title: 'Photography & Videography', desc: 'Architecture, interiors, products, brand films — shot to make you look like the most expensive option in the room. Because premium visuals command premium prices.', tag: 'Visual', image: '/photo.png' },
+  { num: '06', title: 'Website Design', desc: 'Your website is open 24/7. We make it your best salesperson — fast, mobile-first, and built to turn every visitor into an inquiry.', tag: 'Digital', image: '/website.png' },
 ]
 
 function ServiceCard({ service, index }) {
@@ -38,7 +38,8 @@ function ServiceCard({ service, index }) {
       {/* Image */}
       <motion.img
         src={service.image}
-        alt={service.title}
+        alt={`${service.title} — Weinnovent Studios Bengaluru`}
+        loading="lazy"
         animate={{ scale: hovered ? 1.08 : 1 }}
         transition={{ duration: 0.7, ease }}
         style={{
@@ -146,8 +147,8 @@ export default function Services() {
         }}>
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+              animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
               transition={{ duration: 0.6, ease }}
               style={{
                 fontSize: 11, fontWeight: 600,
@@ -157,8 +158,8 @@ export default function Services() {
             >What We Do</motion.p>
 
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+              animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease }}
               style={{
                 fontSize: 'clamp(2rem, 4vw, 3.2rem)',

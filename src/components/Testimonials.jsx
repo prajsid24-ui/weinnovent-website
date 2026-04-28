@@ -4,17 +4,19 @@ import { motion, useInView, useMotionValue, useTransform, useSpring } from 'fram
 const ease = [0.22, 1, 0.36, 1]
 
 const clients = [
-  { name: 'Koncept Homes', industry: 'Residential Real Estate', color: '#0C6867' },
+  { name: 'Koncept Homes', industry: 'Residential and Commercial Interior Designer', color: '#0C6867' },
   { name: 'Nandi Realty', industry: 'Real Estate', color: '#c9a96e' },
-  { name: 'Spaceware Dezigns', industry: 'Interior Design', color: '#5bb3e4' },
-  { name: 'Artefact Buildcon', industry: 'Construction & Development', color: '#a78bfa' },
-  { name: 'Breathing Bricks', industry: 'Sustainable Architecture', color: '#34d399' },
-  { name: 'Flipscape', industry: 'Property Services', color: '#f97316' },
+  { name: 'Spaceware Dezigns', industry: 'Channel Partner for japnese brand', color: '#5bb3e4' },
+  { name: 'Artefact Buildcon', industry: 'Construction,Development & Interiors', color: '#a78bfa' },
+  { name: 'Breathing Bricks', industry: 'Sustainable Architecture and Interiors', color: '#34d399' },
+  { name: 'Flipscape', industry: 'Interior Design', color: '#f97316' },
 ]
 
 const testimonials = [
   { quote: 'Weinnovent didn\'t just build our brand — they built the foundation our business stands on. Every piece of content they create feels like it was made by someone who actually cares about our growth.', author: 'Founder', company: 'Spaceware Dezigns', color: '#5bb3e4', glow: 'rgba(91,179,228,0.2)' },
   { quote: 'The performance campaigns they ran brought in more qualified leads in 60 days than we\'d seen in the previous year. They understand both creativity and conversion — a rare combination.', author: 'Director', company: 'Nandi Realty', color: '#c9a96e', glow: 'rgba(201,169,110,0.2)' },
+  { quote: 'We came to Weinnovent with a brand that looked like everyone else in the market. Six months later, clients tell us we look like the most premium firm in the room — and our inquiry quality has completely changed.', author: 'Principal Architect', company: 'Artefact Buildcon', color: '#a78bfa', glow: 'rgba(167,139,250,0.2)' },
+  { quote: 'Their photography and social media work transformed how people perceive us online. We went from zero Instagram presence to consistently attracting high-ticket residential clients who found us through our content.', author: 'Creative Director', company: 'Koncept Homes', color: '#0C6867', glow: 'rgba(12,104,103,0.2)' },
 ]
 
 function hexToRgb(hex) {
@@ -99,9 +101,9 @@ export default function Testimonials() {
 
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
         <div ref={ref} style={{ marginBottom: 64 }}>
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, ease }}
+          <motion.p initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.6, ease }}
             style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 16 }}>Trusted By</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: 0.1, ease }}
+          <motion.h2 initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }} animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}} transition={{ duration: 0.8, delay: 0.1, ease }}
             style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#1a1a1a' }}>
             Builders and makers<br />who take brand seriously.
           </motion.h2>

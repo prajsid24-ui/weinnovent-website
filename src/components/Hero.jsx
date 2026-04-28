@@ -174,7 +174,7 @@ export default function Hero() {
   return (
     <section style={{ position: 'relative', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', overflow: 'hidden', background: '#0a0a0a' }}>
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, backgroundImage: 'url(/hero-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center top', filter: 'brightness(0.90)' }} />
-      <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.95) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.95) 100%)' }} />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: 'radial-gradient(ellipse 60% 50% at 75% 50%, rgba(12,104,103,0.12) 0%, transparent 70%)' }} />
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: 1160, margin: '0 auto', width: '100%', padding: '130px 24px 80px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }} className="hero-grid">
@@ -186,16 +186,16 @@ export default function Hero() {
             <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 2, repeat: Infinity }}
               style={{ width: 6, height: 6, borderRadius: '50%', background: '#0C6867', display: 'block' }} />
             <span style={{ fontSize: 11, fontWeight: 500, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)' }}>
-              #1 Creative Studio · North Bengaluru
+              #1 Creative Studio · Bengaluru
             </span>
           </motion.div>
 
           {/* Main hook */}
-          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#ffffff', marginBottom: 20 }}>
-            {['Most Brands Waste', 'Their Marketing Budget.', 'We Make Every Rupee', 'Return 10x.'].map((line, i) => (
+          <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.8rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#ffffff', marginBottom: 20, textShadow: '0 2px 24px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.3)' }}>
+            {['Your Best Clients', 'Are Already Searching', "for You — Let's Make Sure They Find You."].map((line, i) => (
               <div key={i} style={{ overflow: 'hidden' }}>
-                <motion.span style={{ display: 'block', color: i >= 2 ? '#0C6867' : '#ffffff' }}
-                  initial={{ y: '110%' }} animate={{ y: 0 }}
+                <motion.span style={{ display: 'block', color: '#ffffff' }}
+                  initial={{ y: '110%', filter: 'blur(8px)' }} animate={{ y: 0, filter: 'blur(0px)' }}
                   transition={{ duration: 0.9, delay: 0.2 + i * 0.1, ease }}
                 >{line}</motion.span>
               </div>
@@ -205,13 +205,13 @@ export default function Hero() {
           {/* Subheadline */}
           <motion.p initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.7, ease }}
             style={{ fontSize: 15, lineHeight: 1.7, color: 'rgba(255,255,255,0.6)', maxWidth: 420, marginBottom: 16 }}>
-            A digital and creative studio in Bengaluru that has helped brands generate <strong style={{ color: '#fff' }}>1,500+ leads</strong>, grow revenue from <strong style={{ color: '#c9a96e' }}>₹10L to ₹1Cr</strong>, and achieve <strong style={{ color: '#fff' }}>3x ROI</strong> on ad spend — in under 6 months.
+            A creative studio in Bengaluru that grows brands through <strong style={{ color: '#fff' }}>organic content and social media</strong> — no vanity metrics, no shortcuts. Just consistent, high-quality work that puts your brand in front of the right people and keeps it there.
           </motion.p>
 
           {/* Trust bar */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.8, ease }}
             style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 10, marginBottom: 28, padding: '10px 14px', borderRadius: 12, background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}>
-            {['⭐ 6+ Brands Grown', '📍 North Bengaluru', '⚡ Reply in 2 hrs'].map((t, i) => (
+            {['⭐ 6+ Brands Grown', '🌱 Organic Growth First', '📍 Bengaluru', '⚡ Reply in 2 hrs'].map((t, i) => (
               <span key={i} style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontWeight: 500 }}>{t}</span>
             ))}
           </motion.div>
@@ -260,10 +260,10 @@ export default function Hero() {
       </div>
 
       {/* Marquee */}
-      <div style={{ position: 'relative', zIndex: 2, borderTop: '1px solid rgba(255,255,255,0.08)', padding: '13px 0', overflow: 'hidden', background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(10px)' }}>
+      <div style={{ position: 'relative', zIndex: 2, borderTop: '1px solid rgba(0,0,0,0.1)', padding: '13px 0', overflow: 'hidden', background: '#ffffff' }}>
         <div style={{ display: 'flex', width: 'max-content', animation: 'marquee 28s linear infinite' }}>
           {[...words, ...words, ...words].map((w, i) => (
-            <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 18, padding: '0 22px', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', whiteSpace: 'nowrap' }}>
+            <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 18, padding: '0 22px', fontSize: 11, fontWeight: 500, letterSpacing: '0.18em', textTransform: 'uppercase', color: '#111111', whiteSpace: 'nowrap' }}>
               {w}
               <span style={{ width: 4, height: 4, borderRadius: '50%', background: '#0C6867', display: 'inline-block' }} />
             </span>

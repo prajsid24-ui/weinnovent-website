@@ -4,12 +4,12 @@ import { motion, useInView, useMotionValue, useTransform, useSpring } from 'fram
 const ease = [0.22, 1, 0.36, 1]
 
 const cases = [
-  { num: '01', client: 'Koncept Homes', category: 'Residential Real Estate', title: 'Brand Identity for a Premium Residential Developer', tags: ['Brand Identity', 'Digital Strategy', 'Social Media'], result: 'Identity Built', color: '#0C6867', glow: 'rgba(12,104,103,0.35)' },
-  { num: '02', client: 'Nandi Realty', category: 'Real Estate', title: 'End-to-End Digital Presence and Lead Acquisition', tags: ['Performance Marketing', 'Lead Generation', 'Creative Direction'], result: 'Pipeline Activated', color: '#c9a96e', glow: 'rgba(201,169,110,0.35)' },
-  { num: '03', client: 'Spaceware Dezigns', category: 'Interior Design', title: 'Portfolio Identity for a Premium Interiors Studio', tags: ['Brand Identity', 'Website Design', 'Visual Content'], result: 'Identity Launched', color: '#5bb3e4', glow: 'rgba(91,179,228,0.35)' },
-  { num: '04', client: 'Artefact Buildcon', category: 'Construction & Development', title: 'Brand Positioning for a Firm Entering the Premium Segment', tags: ['Brand Strategy', 'Visual Identity', 'Digital Presence'], result: 'Market Positioned', color: '#a78bfa', glow: 'rgba(167,139,250,0.35)' },
-  { num: '05', client: 'Breathing Bricks', category: 'Sustainable Architecture', title: 'Editorial Voice and Category Authority for a Green Architecture Studio', tags: ['Content Strategy', 'Brand Storytelling', 'Social Media'], result: 'Category Authority', color: '#34d399', glow: 'rgba(52,211,153,0.35)' },
-  { num: '06', client: 'Flipscape', category: 'Property Services', title: 'Acquisition Strategy for a Property Discovery Platform', tags: ['Performance Marketing', 'Creative Direction', 'Digital Strategy'], result: 'Sales Pipeline', color: '#f97316', glow: 'rgba(249,115,22,0.35)' },
+  { num: '01', client: 'Koncept Homes', category: 'Residential & Commercial Interior Designer', title: 'Building a Premium Brand Presence Through Organic Social Media', tags: ['Social Media', 'Creative Content', 'Organic Growth'], result: 'Brand Presence Built', color: '#0C6867', glow: 'rgba(12,104,103,0.35)' },
+  { num: '02', client: 'Nandi Realty', category: 'Real Estate', title: 'End-to-End Lead Generation Campaign That Filled the Sales Pipeline', tags: ['Performance Marketing', 'Lead Generation', 'Creative Direction'], result: 'Pipeline Activated', color: '#c9a96e', glow: 'rgba(201,169,110,0.35)' },
+  { num: '03', client: 'Spaceware Dezigns', category: 'Channel Partner — Japanese Brand', title: 'Full-Funnel Campaign for a Premium Interiors Channel Partner', tags: ['Performance Campaigns', 'Brand Identity', 'Visual Content'], result: 'Identity Launched', color: '#5bb3e4', glow: 'rgba(91,179,228,0.35)' },
+  { num: '04', client: 'Artefact Buildcon', category: 'Construction, Development & Interiors', title: 'Positioning a Construction Firm as the Premium Choice Through Content', tags: ['Social Media', 'Creative Content', 'Brand Strategy'], result: 'Market Positioned', color: '#a78bfa', glow: 'rgba(167,139,250,0.35)' },
+  { num: '05', client: 'Breathing Bricks', category: 'Sustainable Architecture & Interiors', title: 'Organic Editorial Voice That Made Them the Category Authority', tags: ['Organic Content', 'Brand Storytelling', 'Social Media'], result: 'Category Authority', color: '#34d399', glow: 'rgba(52,211,153,0.35)' },
+  { num: '06', client: 'Flipscape', category: 'Interior Design', title: 'Growing a Design Studio From Zero to a Recognisable Brand Online', tags: ['Social Media', 'Creative Content', 'Organic Growth'], result: 'Brand Built', color: '#f97316', glow: 'rgba(249,115,22,0.35)' },
 ]
 
 // 3D tilt card with glass morphism
@@ -202,14 +202,14 @@ export default function CaseStudies() {
         <div ref={ref} style={{ display: 'flex', flexWrap: 'wrap', gap: 24, justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 64 }}>
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
+              animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
               transition={{ duration: 0.6, ease }}
               style={{ fontSize: 11, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#0C6867', marginBottom: 14 }}
             >Selected Work</motion.p>
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 20, filter: 'blur(8px)' }}
+              animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
               transition={{ duration: 0.8, delay: 0.1, ease }}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, color: '#1a1a1a' }}
             >Work we stand<br />behind.</motion.h2>
