@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Lenis from 'lenis'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -8,6 +9,19 @@ import About from './components/About'
 import Testimonials from './components/Testimonials'
 import ContactCTA from './components/ContactCTA'
 import Footer from './components/Footer'
+import MarqueeBelt from './components/MarqueeBelt'
+
+function useLenis() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.15,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    })
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf) }
+    requestAnimationFrame(raf)
+    return () => lenis.destroy()
+  }, [])
+}
 
 const WA_LINK = `https://wa.me/917019149074?text=${encodeURIComponent("Hi Weinnovent Studios! I visited your website and I'm interested in your services. Can we connect?")}`
 
@@ -182,11 +196,14 @@ function WhatsAppFloat() {
 }
 
 export default function App() {
+  useLenis()
   return (
     <div style={{ fontFamily: "var(--font)" }}>
       <Navbar />
       <Hero />
+      <MarqueeBelt />
       <Services />
+      <MarqueeBelt reverse light />
       <CaseStudies />
       <About />
       <Testimonials />

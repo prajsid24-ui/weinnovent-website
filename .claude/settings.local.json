@@ -5,7 +5,15 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
       "Bash(echo \"Started PID $!\")",
       "Bash(npm install *)",
-      "Bash(npm start *)"
+      "Bash(npm start *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(npm run *)",
+      "Read(//tmp/**)",
+      "Bash(node -e \"require\\('/Users/prajwalsavalgi/Downloads/Website/node_modules/lenis/package.json'\\).version\")",
+      "Read(//Users/prajwalsavalgi/Downloads/**)",
+      "Read(//Users/prajwalsavalgi/Desktop/**)"
     ]
   }
 }

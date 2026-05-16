@@ -177,6 +177,11 @@ export default function Hero() {
       <div style={{ position: 'absolute', inset: 0, zIndex: 1, background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.95) 100%)' }} />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1, pointerEvents: 'none', background: 'radial-gradient(ellipse 60% 50% at 75% 50%, rgba(12,104,103,0.12) 0%, transparent 70%)' }} />
 
+      {/* Animated gradient mesh blobs */}
+      <div className="hero-blob-1" style={{ position: 'absolute', zIndex: 1, top: '5%', left: '-5%', width: 620, height: 620, borderRadius: '50%', background: 'radial-gradient(circle, rgba(12,104,103,0.24) 0%, transparent 65%)', filter: 'blur(90px)', pointerEvents: 'none' }} />
+      <div className="hero-blob-2" style={{ position: 'absolute', zIndex: 1, top: '35%', right: '-8%', width: 520, height: 420, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,169,110,0.13) 0%, transparent 65%)', filter: 'blur(75px)', pointerEvents: 'none' }} />
+      <div className="hero-blob-3" style={{ position: 'absolute', zIndex: 1, bottom: '5%', left: '28%', width: 480, height: 480, borderRadius: '50%', background: 'radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 65%)', filter: 'blur(85px)', pointerEvents: 'none' }} />
+
       <div style={{ position: 'relative', zIndex: 2, maxWidth: 1160, margin: '0 auto', width: '100%', padding: '130px 24px 80px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, alignItems: 'center' }} className="hero-grid">
 
         <div>
